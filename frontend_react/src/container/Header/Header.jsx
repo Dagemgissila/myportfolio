@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
+import { AiFillGithub } from "react-icons/ai";
 import "./Header.scss";
 
 const scaleVariants = {
@@ -33,8 +34,24 @@ const Header = () => (
         </div>
 
         <div className="tag-cmp app__flex">
-          <p className="p-text">Web Developer</p>
-          <p className="p-text">Freelancer</p>
+          <p className="p-text">I am Software Engineer</p>
+          <p className="p-text"> Fullstack Web Developer</p>
+        </div>
+
+        {/* New Button Group: GitHub Icon and Contact Me */}
+        <div className="header-buttons app__flex">
+          <a href="#contact" className="contact-button">
+            Contact Me
+          </a>
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noreferrer"
+            className="github-icon"
+            aria-label="GitHub Profile"
+          >
+            <AiFillGithub size={30} />
+          </a>
         </div>
       </div>
     </motion.div>

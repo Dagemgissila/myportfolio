@@ -4,4 +4,5 @@ import Skills from "./Skills/Skills";
 import Header from "./Header/Header";
 import Work from "./Work/Work";
 import Testimonial from "./Testimonial/Testimonial";
-export { About, Footer, Header, Skills, Testimonial, Work };
+import Certifications from "./Certifications/Certifications";
+export { About, Footer, Header, Skills, Testimonial, Work, Certifications };

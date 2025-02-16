@@ -78,6 +78,7 @@
       width: 100%;
       text-transform: uppercase;
       text-align: right;
+      font-weight: 600;
     }
   }
 
@@ -192,5 +193,52 @@
 
   @media screen and (max-width: 1200px) {
     margin: 2rem 0;
+  }
+}
+
+.app__header {
+  // existing styles...
+
+  .header-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 60%;
+
+    .github-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--black-color);
+      transition: color 0.3s ease;
+      width: 50px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 50%;
+      color: var(--white-color);
+
+      &:hover {
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+      }
+    }
+
+    .contact-button {
+      padding: 0.7rem 1.5rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 800;
+      box-shadow: 0px 0px 20px rgba(10, 200, 0, 0.1);
+
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: var(--secondary-color);
+      }
+    }
   }
 }

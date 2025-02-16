@@ -24,10 +24,10 @@
     transition: all 0.3s ease;
     margin: 0.5rem;
 
-    &:hover {
-      background-color: var(--secondary-color);
-      color: #fff;
-    }
+    // &:hover {
+    //   background-color: var(--secondary-color);
+    //   color: #fff;
+    // }
 
     @media screen and (min-width: 2000px) {
       padding: 1rem 2rem;
@@ -45,24 +45,26 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 
   .app__work-item {
-    width: 270px;
+    width: 450px;
     flex-direction: column;
 
-    margin: 2rem;
+    margin: 1rem;
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: #fff;
     color: #000;
 
+    display: flex;
+    justify-content: space-between;
     cursor: pointer;
     transition: all 0.3s ease;
 
-    &:hover {
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-    }
+    // &:hover {
+    //   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    // }
 
     @media screen and (min-width: 2000px) {
       width: 470px;
@@ -95,40 +97,40 @@
   }
 }
 
-.app__work-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+// .app__work-hover {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.5);
 
-  border-radius: 0.5rem;
-  opacity: 0;
-  transition: all 0.3s ease;
+//   border-radius: 0.5rem;
+//   opacity: 0;
+//   transition: all 0.3s ease;
 
-  div {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+//   div {
+//     width: 50px;
+//     height: 50px;
+//     border-radius: 50%;
+//     background-color: rgba(0, 0, 0, 0.5);
+//     color: #fff;
 
-    margin: 1rem;
-    font-family: var(--font-base);
-    font-weight: 800;
-    cursor: pointer;
-    transition: all 0.3s ease;
+//     margin: 1rem;
+//     font-family: var(--font-base);
+//     font-weight: 800;
+//     cursor: pointer;
+//     transition: all 0.3s ease;
 
-    svg {
-      width: 50%;
-      height: 50%;
-      color: var(--white-color);
-    }
-  }
-}
+//     svg {
+//       width: 50%;
+//       height: 50%;
+//       color: var(--white-color);
+//     }
+//   }
+// }
 
 .app__work-content {
   padding: 0.5rem;
@@ -152,5 +154,72 @@
     border-radius: 10px;
     background-color: #fff;
     top: -25px;
+  }
+}
+
+.redirect-icon {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  div {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+
+    margin: 1rem;
+    font-family: var(--font-base);
+    font-weight: 1000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    svg {
+      width: 50%;
+      height: 50%;
+      color: var(--white-color);
+    }
+  }
+}
+
+.tech-stack {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 1rem; // Adjust as needed
+  flex-wrap: wrap;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    // A subtle transition for smoother hover effect
+    transition: transform 0.2s ease-in-out;
+
+    .tech-stack__icon-wrapper {
+      width: 50px;
+      height: 50px;
+      background-color: #f0f0f0; // Circle background color
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+      }
+    }
+
+    .p-text {
+      font-size: 14px;
+      color: #333;
+    }
   }
 }

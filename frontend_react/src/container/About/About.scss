@@ -4,35 +4,99 @@
   flex-direction: column;
 }
 
-.app__profiles {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+.app__about-container {
   margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
-.app__profile-item {
-  width: 190px;
+.app__about-services {
+  flex: 0.5;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   flex-direction: column;
-  margin: 2rem;
+  gap: 1.5rem;
 
-  img {
+  @media (max-width: 1024px) {
     width: 100%;
-    height: 170px;
-    border-radius: 15px;
-    object-fit: cover;
   }
+}
 
-  @media screen and (min-width: 2000px) {
-    width: 370px;
-    margin: 2rem 4rem;
+.app__about-service {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-    img {
-      height: 320px;
-    }
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.app__about-service-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.app__about-service-content {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.app__about-description {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 1rem;
+
+  @media (max-width: 1024px) {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.app__about-description h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.app__about-description p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+.app__about-cv-button {
+  background: #007bff;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background: #0056b3;
   }
 }
